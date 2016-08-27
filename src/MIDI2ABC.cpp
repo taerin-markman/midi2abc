@@ -593,8 +593,8 @@ void AddTrack(
     trackItem->name = new char[name_sz+1];
     trackItem->instrument = new char[inst_sz+1];
 
-    strcpy_s(trackItem->name, MAX_STRING_SIZE, name);
-    strcpy_s(trackItem->instrument, MAX_STRING_SIZE, instrument);
+    strcpy_s(trackItem->name, name_sz + 1, name);
+    strcpy_s(trackItem->instrument, inst_sz + 1, instrument);
   }
   else
   {
@@ -609,8 +609,8 @@ void AddTrack(
     trackItem->name = new char[name_sz+1];
     trackItem->instrument = new char[inst_sz+1];
 
-    strcpy_s(trackItem->name, MAX_STRING_SIZE, cpyTrack->name);
-    strcpy_s(trackItem->instrument, MAX_STRING_SIZE, cpyTrack->instrument);
+    strcpy_s(trackItem->name, name_sz + 1, cpyTrack->name);
+    strcpy_s(trackItem->instrument, inst_sz + 1, cpyTrack->instrument);
     /* TODO: do lead */
   }
 
